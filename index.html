@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Words of Wisdom</title>
+<style>
+   body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   }
+   .result {
+      font-size: 20px;
+      font-weight: 500;
+   }
+</style>
+</head>
+<body>
+<h1>Words of Wisdom</h1>
+Find words of wisdom here<button class="Btn">
+CLICK ME
+</button>
+<div style="color: green;" class="result"></div>
+<h3>
+Click on the above button to check for wise words.
+</h3>
+<script>
+    let resEle = document.querySelector(".result");
+  function returnMessage(){
+    const num = Math.floor(Math.random() * 4);
+    switch(num){
+     case 0:
+       return 'First come first served';
+     case 1:
+       return 'Early bird catches the worms';
+     case 2:
+       return 'The less he spoke the more he herd';
+     case 3:
+       return 'Time is money';
+     default:
+       return 'System Erroy';
+    }
+  }
+ document.querySelector(".Btn").addEventListener("click", () => {
+      resEle.innerHTML = returnMessage();
+   });
+</script>
+</body>
+</html>
